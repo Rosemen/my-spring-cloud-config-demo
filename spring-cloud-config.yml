@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: spring-cloud-config-client-dev
+server:
+  port: 9091
+
+eureka:
+  instance:
+    instance-id: config-client-config-dev
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/
+
+---
+spring:
+  profiles: test
+  application:
+    name: spring-cloud-config-server-dev
+server:
+  port: 9092
+
+eureka:
+  instance:
+    instance-id: config-client-config-test
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/
