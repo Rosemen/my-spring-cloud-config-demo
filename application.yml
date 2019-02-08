@@ -3,13 +3,13 @@
     active: dev
 
 ---
-server:
-  port: 8081
 spring:
   profiles: dev
+  application:
+    name: spring-cloud-config-server-dev
 
 ---
-server:
-  port: 8082
 spring:
   profiles: test
+  application:
+    name: spring-cloud-config-server-test
